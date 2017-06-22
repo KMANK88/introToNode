@@ -41,3 +41,24 @@ http.createServer(function (request, response){
 });
 
 ```
+
+
+
+____________________
+
+### Express Web server
+[Express API](http://expressjs.com/)
+To add express node module to our application:
+`npm install -- save express`
+To ensure it was added successfully, check your `package.json` for:
+```js
+"dependencies": {
+  "express": "^4.15.3"
+}
+```
+
+This also gives us a ton of code we do not care to track in our Github, in the
+`node_modules/` folder. TO ignore this code:
+
+`touch .gitignore`
+add `node_modues/` to `.gitignore`
