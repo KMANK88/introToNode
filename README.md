@@ -10,4 +10,34 @@ __NPM__ Node package modular- Is a tool that allows us to easily access the node
 
 Every node app has a __Package.json__ , which is the master file that keeps track of all node modules your project cares about.
 
-To add a `packag.json` to your project `npm init`, and accept all defaults. 
+To add a `packag.json` to your project `npm init`, and accept all defaults.
+
+_______
+*commit your Code!*
+`git add -A`
+`git commit -m "introductory dfinition for node"`
+`git push orgin master`
+____________________
+Example node_Module : [Moment.js][https://momentjs.com/]
+
+
+____________________
+
+### Node HTTP Server
+
+We used the node moduel http to buld a simple web server, that we can then run and connect using the web address: `http://localhost:3000/` .
+To run the server command `node index.js`
+
+``` js
+var http = require('http');
+
+
+http.createServer(function (request, response){
+  response.writeHead(200,{'Content-Type': 'text/plain'});
+  response.end('hello world!');
+
+}).listen(3000, function(){
+  console.log('App is listeneing on port 3000')
+});
+
+```
