@@ -37,7 +37,7 @@ app.post('/animals4Sale', function(req,res){
   var color = req.body.color;
   var price = req.body.price;
   var product = {type: type, color: color, price: price};
-  res.json(animals4Sale);
+  res.json(product);
 })
 
 app.post('/People', function(req,res){
