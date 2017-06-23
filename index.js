@@ -1,6 +1,8 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express ();
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/greeting',function(req,res){
   res.send("hello")
 })
@@ -20,6 +22,31 @@ app.get('/color/:color', function(req, res) {
 app.get("/saluatations" ,function(req, res){
   res.send("hello");
 })
+
+app.post('/products', function(req,res){
+// req.body is all the info coming in from the form
+  var name = req.body.name ;
+  var color = req.body.color;
+  var price = req.body.price;
+  var product = {name: name, color: color, price: price};
+  res.json(product);
+});
+
+app.post('/animals4Sale', function(req,res){
+  var type = req.body.type;
+  var color = req.body.color;
+  var price = req.body.price;
+  var product = {type: type, color: color, price: price};
+  res.json(animals4Sale);
+})
+
+app.post('/People', function(req,res){
+  var name = req.body.name;
+  var alive = true;
+  var person= {name: name, alive : alive};
+  res.json(person);
+});
+
 
 app.listen(3000, function(){
   console.log('Listening on port 3000');

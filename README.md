@@ -16,7 +16,7 @@ _______
 *commit your Code!*
 `git add -A`
 `git commit -m "introductory dfinition for node"`
-`git push orgin master`
+`git push origin master`
 ____________________
 Example node_Module : [Moment.js][https://momentjs.com/]
 
@@ -63,3 +63,11 @@ This also gives us a ton of code we do not care to track in our Github, in the
 `touch .gitignore`
 add `node_modues/` to `.gitignore`
 ____________________
+
+
+
+
+### Nodemon
+nodemon will watch our files automatically and restart our server so we dont't have to do it manually.
+`nodemon index.js` -> to start server
+how to install: `sudo npm install -g nodemon`
