@@ -11,6 +11,9 @@ app.get('/instagrams',function(req,res){
   res.send("Get Shwifty!");
 });
 
+app.post('/instagrams',function(req,res){
+  res.send("Take off your pants and your pannies");
+})
 
 var server = app.listen(port,function(){
   console.log("Running on port 2000");
