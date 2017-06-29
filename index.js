@@ -14,7 +14,7 @@ var instagrams = [
   { title: "Also my dog", date: makeDate(8), img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR04cM7atojGKtFOZTukDBBqvVy13OgO3ZPrib39rtHEE_qGhdh" },
   { title: "Not my dog", date: makeDate(7), img: "http://barkingroyalty.com/wp-content/uploads/2015/12/Beagle-puppy.jpg?x30644" },
 ]
-
+app.use(express.static(__dirname+"/public"));
 
 app.get('/instagrams',function(req,res){
   res.json({message: "Found data", data : instagrams });
@@ -22,7 +22,7 @@ app.get('/instagrams',function(req,res){
 
 app.post('/instagrams',function(req,res){
 
-app.use(express.static(__dirname+"/public"));
+
 
 
 var newGram = {title: req.body.title, img: req.body.img, date: makeDate(0) };
