@@ -22,11 +22,14 @@ app.get('/instagrams',function(req,res){
 
 app.post('/instagrams',function(req,res){
 
+app.use(express.static(__dirname+"/public"));
+
+
 var newGram = {title: req.body.title, img: req.body.img, date: makeDate(0) };
   instagrams.push(newGram);
   res.json({ message: "Post success", date: instagrams});
 })
 
 var server = app.listen(port,function(){
-  console.log("Running on port 3000");
+  console.log("Running on port",port);
 });
